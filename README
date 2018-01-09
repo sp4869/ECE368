@@ -1,0 +1,10 @@
+This repository contains my programming projects using different data
+structures including linked lists, graphs, arrays, and binary search trees.
+The first project involves sorting arrays using the shell sort algorithm
+The second project is similar to the first one except it sorts linked lists
+using shell sort.
+The third and fourth project packages transitors in an efficent 
+manner and is solved using BST's.
+The fifth project uses a graph algorithm to determine the longest commom subsequence in a genome 
+The sixth project uses dijkstra's algorithm to find the shortest path 
+across a river.
