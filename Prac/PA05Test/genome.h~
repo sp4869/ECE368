@@ -1,0 +1,5 @@
+#ifndef PA05_H
+#define PA05_H
+
+int ** Load_From_File(char *Filename, int * a,int * b);
+#endif

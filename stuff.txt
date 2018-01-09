@@ -1,0 +1,11 @@
+ if(root-> letter == 'H')
+   {
+     root->height = (root->right)->height + (root->left)->height;
+     root->width = max((root->right)->width,(root->left)->width);
+   }
+  
+  if(root-> letter == 'V')
+   {
+     root->width = (root->right)->width + (root->left)->width;
+     root->height = max((root->right)->height,(root->left)->height);
+   }

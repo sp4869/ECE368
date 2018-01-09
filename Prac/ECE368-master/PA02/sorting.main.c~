@@ -1,0 +1,31 @@
+#include "sorting.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(int argc, char * * argv){
+	clock_t io_start_time = clock();
+	Node * head = Load_File(argv[2]);
+	clock_t io_end_time = clock();
+
+	clock_t sort_start_time = clock();
+	head = Shell_Sort(head);
+        
+	head = reverse_node(head);
+        while(head != NULL)
+	  {
+	    printf("%lu\n",head->value);
+            head = head->next;
+          }
+	clock_t sort_end_time = clock();
+
+	io_start_time += clock();
+	Save_File(argv[3], head);
+	io_end_time += clock();
+
+	//destroy_node(head);
+	printf("I/O time:\t\t%le sec\n", (double)(io_end_time-io_start_time)/CLOCKS_PER_SEC);
+	printf("Sorting time:\t\t%le sec\n", (double)(sort_end_time-sort_start_time)/CLOCKS_PER_SEC);
+
+	return EXIT_SUCCESS;
+}

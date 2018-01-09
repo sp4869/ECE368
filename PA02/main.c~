@@ -1,0 +1,38 @@
+#include <stdlib.h>
+#include "sorting.h"
+#include <stdio.h>
+#include<string.h>
+Node * create_node(long val);
+void destroy_node(Node * list);
+long power(long a,long b);
+Node * GenSeq(int Size,long * count);
+
+int main(int argc ,char ** argv)
+{
+  char * file = "New.b";
+  Node * temp = NULL;
+  Node * trial = NULL;
+  //temp = Load_From_File(file);
+  long count = 0;
+  /*while(temp != NULL)
+  {
+    printf("%lu\n",temp->value);
+    temp = temp->next;
+    count++;
+  }*/
+  trial = GenSeq(1000,&count);
+  while(trial != NULL)
+  {
+    printf("%lu\n",trial->value);
+    trial = trial->next;
+    //count++;
+  }
+
+  //destroy_node(temp);
+  /*char * filename = "New.b";
+  int savebinary = 0;
+  savebinary = Save_To_File(filename,temp);
+  printf("%d\n",savebinary);
+  */
+  return EXIT_SUCCESS;
+}

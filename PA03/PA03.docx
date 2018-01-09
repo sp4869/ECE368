@@ -1,0 +1,10 @@
+﻿Siddharth Prabhu
+ECE 368
+PA03
+
+The time complexity of constructing a binary tree from an input will be O(n). This is because a stack was used to construct a tree and every node made will be pushed and popped off the stack in order to construct the full binary tree. So, in total there will be 2n operations. Since this is proportional to the number of nodes, the time complexity is O(n). 
+
+The time complexity of computing coordinates of the rectangles will be O(n) because every node in the tree will have to be visited and its coordinates will have to be computed. At each node, the left and right parts will have to be visited to calculated the node's x-coordinate and y-coordinate increasing computations to 2n, which still means time complexity is O(n).
+
+
+
